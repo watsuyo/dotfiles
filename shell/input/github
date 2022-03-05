@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function input_github_name() {
+	echo "GitHubネームを変数に保存: "
+	read github_name
+	echo "👆で保存しますか？"
+}
+
+input_github_name
+
+select yn in "Yes" "No"; do
+	case $yn in
+		Yes ) echo "GITHUB_NAME=\"$github_name\"" >> ~/dotfiles/shell/state.txt && break;;
+		No ) input_github_name
+	esac
+done

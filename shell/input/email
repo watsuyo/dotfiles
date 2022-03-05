@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function input_email() {
+	echo "Emailを変数に保存: "
+	read email
+	echo "👆で保存しますか？"
+}
+
+input_email
+
+select yn in "Yes" "No"; do
+	case $yn in
+		Yes ) echo "EMAIL=\"$email\"" >> ~/dotfiles/shell/state.txt && break;;
+		No ) input_email
+	esac
+done

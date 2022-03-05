@@ -1,0 +1,74 @@
+add_newline = true
+
+# プロンプトの表示設定
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$hg_branch
+$character\
+"""
+
+right_format = """
+$nodejs
+$ruby
+$time
+"""
+
+[character]
+success_symbol = "🦄  "
+error_symbol = "[✗](bold red) "
+
+[git_branch]
+symbol = "🌴  "
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😅"
+diverged = "😵"
+up_to_date = "✓"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[directory]
+truncation_length = 8
+truncate_to_repo = false
+
+[docker_context]
+format = "[🐋 $context](blue bold)"
+
+[hg_branch]
+format = "[$branch](bold purple)"
+truncation_length = 4
+truncation_symbol = ""
+
+[nodejs]
+format = "[$version](bold green) "
+
+[ruby]
+format = "[$version](bold red) "
+symbol = "🔺 "
+
+[time]
+#時間の表示をオンにして12時間表示に
+disabled = false
+format = '[ $time ]($style) '

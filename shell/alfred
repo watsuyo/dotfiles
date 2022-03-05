@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Setting up Alfred..."
+ALFRED=~/Dropbox/alfred/Alfred.alfredpreferences
+(find . -type d) | (cd $ALFRED && xargs mkdir -p)
