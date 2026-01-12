@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "Symlinking dotfiles..."
-stow -v -d ~/dotfiles/packages -t ~ starship zsh karabiner vscode vim git yabai skhd

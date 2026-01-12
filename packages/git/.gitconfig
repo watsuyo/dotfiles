@@ -1,8 +1,0 @@
-[user]
-	name = watsuyo
-	email = watsuyo.dev@gmail.com
-
-[branch]
-  autosetuprebase = always
-[core]
-	quotepath = false
